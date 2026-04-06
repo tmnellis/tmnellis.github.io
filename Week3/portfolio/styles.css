@@ -1,0 +1,191 @@
+/*
+.tinos-regular {
+  font-family: "Tinos", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.tinos-bold {
+  font-family: "Tinos", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.tinos-regular-italic {
+  font-family: "Tinos", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.tinos-bold-italic {
+  font-family: "Tinos", serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+
+.courier-prime-regular {
+  font-family: "Courier Prime", monospace;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.courier-prime-bold {
+  font-family: "Courier Prime", monospace;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.courier-prime-regular-italic {
+  font-family: "Courier Prime", monospace;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.courier-prime-bold-italic {
+  font-family: "Courier Prime", monospace;
+  font-weight: 700;
+  font-style: italic;
+}
+*/
+
+/*Set defaults and constants*/
+*{
+    --baseColor: #3F1B0F;
+    --textColor: #FFCFBF;
+    --borderColor: #C0542F;
+    --cardColor: rgb(127, 55, 31, 0.82);
+    /*--borderColor: #53c02fff;*/
+    --accentColor: #FF6F3F;
+    /*background-color:var(--base);*/
+    color:var(--textColor);
+    font-family: "Courier Prime", monospace;
+}
+
+body{
+    background-color:var(--baseColor);
+    background-image: url('./assets/css-pattern-by-magicpattern.png');
+    padding-left: 60px;
+    padding-right: 60px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+header{
+    padding-top:16px;
+    padding-bottom:16px;
+    margin-bottom:32px;
+    font-family: "Courier Prime", monospace;
+    color:var(--accentColor);
+    font-size:32px;
+    font-weight:700;
+    /*background-color:var(--cardColor);*/
+
+    /*animation-name: colorShift;
+    animation-duration: 2s;
+    animation-iteration-count:infinite;
+    animation-direction:alternate-reverse;*/
+}
+
+/*@keyframes colorShift{
+    0% {color:var(--accentColor);}
+    100% {color:var(--textColor);}
+}*/
+
+header::first-letter{
+    font-size:48px;
+}
+
+h1{
+    font-family: "Tinos", serif;
+}
+
+.title{
+    font-weight: 800;
+    font-size: 72px;
+    margin-bottom:32px;
+    /*line-height:150px;*/
+}
+
+.title::first-letter{
+    color:var(--accentColor);
+}
+
+h2{
+    font-family: "Tinos", serif;
+    font-weight: 800;
+    font-size: 36px;
+    margin-bottom:32px;
+    /*line-height:150px;*/
+    text-transform: uppercase;
+    color:var(--textColor);
+    text-shadow: 0px 0px 5px var(--borderColor);
+}
+
+.cards div {
+    background-color: var(--cardColor);
+    padding: 16px;
+    border: .5px solid var(--borderColor);
+    border-radius: 10px;
+    width: 75%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 24px;
+    transition: all 1s;
+}
+
+.cards div:hover{
+    box-shadow: 8px 8px var(--accentColor);
+    margin-bottom: 32px;
+}
+
+.cards div > img{
+    width: 100%;
+    height: 50%;
+    object-fit:cover;
+    border-radius:12px;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, .4);
+}
+
+h3{
+    font-family: "Tinos", serif;
+    font-weight: 700;
+    font-size: 32px;
+    line-height:25px;
+    text-transform: uppercase;
+    letter-spacing: 3.52 px;
+}
+
+.newProjects{
+    padding: 16px;
+}
+
+.newProjects > ul{
+    background-color:var(--cardColor);
+    font-size: 24px;
+}
+
+.newProjects > ul li::marker{
+    content: " > ";
+}
+
+.deadline {
+    color: var(--accentColor);
+}
+
+.newProjects{
+    padding: 16px;
+}
+
+.oldProjects > ul{
+    background-color:var(--cardColor);
+    font-size: 24px;
+}
+
+.oldProjects > ul li::marker{
+    content: " > ";
+}
+
+.year {
+    color: var(--accentColor);
+}
