@@ -1,0 +1,84 @@
+* {
+    --oBlack: #3F1B0F;
+    --oDark: #7F371F;
+    --oMid: #C0542F;
+    --oBright: #FF6F3F; 
+    --oWhite: #FFCFBF;
+    font-size: 16px;
+    font-family:"Courier Prime", monospace;
+}
+
+body { 
+    padding-top: 5vh;
+    background-color: var(--oMid);
+    color: var(--oBlack);
+}
+
+nav {
+    position: fixed; 
+    background-color: var(--oDark);
+    color: var(--oWhite);
+
+    top: 0px;
+    left: 0px;
+    width:100vw;
+    height:5vh;
+    z-index: 10;
+
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    /*padding: 1.5rem;*/
+    margin: 0 auto;
+}
+
+nav > button {
+    margin: 0.25rem;
+    flex-grow: 1;
+    border-width: 0;
+    background-color: var(--oMid);
+}
+
+nav > button:hover {
+    background-color: var(--oBright);
+}
+
+.cards {
+    padding: 1.5rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 18.75rem 18.75rem;
+    gap: 0.5rem 0.5rem;
+}
+
+.cards > div{
+    background-color: var(--oWhite);
+    border-radius: 0.25rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+.cards div > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0.25rem;
+    /*margin-bottom: 0.5rem;*/
+}
+
+@media screen and (max-width: 720px){
+    * {
+        font-size: 12px;
+    }
+    
+    .cards {
+        padding: 1.5rem;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(1, 1fr);
+        gap: 0.5rem 0.5rem;
+    }
+}
